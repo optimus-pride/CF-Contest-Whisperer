@@ -1,0 +1,34 @@
+{
+  "name": "codeforces-extension",
+  "description": "Codeforces submission notifications in vscode",
+  "version": "0.0.1",
+  "publisher": "amitabh singh",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Codeforces Extension",
+      "properties": {
+        "codeforces-extension.handle": {
+          "type": "string",
+          "default": "",
+          "description": "Codeforces user handle"
+        }
+      }
+    }
+  },
+  "scripts": {},
+  "devDependencies": {
+    "@types/vscode": "^1.73.0",
+    "typescript": "^4.9.4",
+    "ts-loader": "^9.4.2"
+  },
+  "dependencies": {
+    "axios": "^1.7.2"
+  }
+}
