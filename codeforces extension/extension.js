@@ -81,7 +81,7 @@ async function activate(context) {
                 lastSubmissionId = latestSubmission.id;
             } else {
                 // If the latest submission is not in the TESTING state and its ID is different from the last recorded submission ID
-                if (latestSubmission.verdict !== 'TESTING' && lastSubmissionId !== latestSubmission.id) {
+                if (latestSubmission.verdict !== 'TESTING' && lastSubmissionId !== latestSubmission.id && latestSubmission.verdict !== 'undefined') {
                     // Update the last submission ID to the latest submission's ID
                     lastSubmissionId = latestSubmission.id;
 
