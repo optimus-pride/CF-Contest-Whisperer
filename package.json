@@ -10,7 +10,7 @@
 		"vscode": "^1.74.0"
 	},
 	"activationEvents": [
-		"onStartupFinished"
+		"*"
 	],
 	"main": "./extension.js",
 	"contributes": {

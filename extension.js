@@ -17,17 +17,15 @@ async function getHandle() {
     const config = vscode.workspace.getConfiguration('codeforces-notify');
     let handle = config.get('handle');
   
-    if (!handle) {
-      handle = await vscode.window.showInputBox({
+    handle = await vscode.window.showInputBox({
         prompt: 'Please enter your Codeforces handle',
         ignoreFocusOut: true,
-      });
-  
-      if (handle) {
+    });
+
+    if (handle) {
         await config.update('handle', handle, vscode.ConfigurationTarget.Global);
-      } else {
+    } else {
         vscode.window.showErrorMessage('Codeforces handle is required for the extension to work');
-      }
     }
   
     return handle;
